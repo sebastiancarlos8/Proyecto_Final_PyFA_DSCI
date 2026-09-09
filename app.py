@@ -13,7 +13,7 @@ if modulos == "Home":
   st.markdown("""xxxx""")
   st.subheader("Elaborado por")
   st.write("**Nombre completo:** David Sebastian Carlos Ipanaque")
-  st.write("**Módulo:**🐍 Especialización en Python for Analytics")
+  st.write("**Módulo:** 🐍 Especialización en Python for Analytics")
   st.write("**Año:** 2026")
   st.subheader("Información general del Dataset")
   st.markdown("""Egresado de la carrera de Ingeniería Industrial, con experiencia en analítica de datos en el sector retail, consumo masivo y seguros, dentro del área comercial y de recursos humanos. \nApasionado por la lógica, recursos humanos, uso de datos masivos y programación.""")
