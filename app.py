@@ -16,7 +16,7 @@ if modulos == "Home":
   st.write("**Módulo:** 🐍 Especialización en Python for Analytics")
   st.write("**Año:** 2026")
   st.subheader("Información general del Dataset")
-  st.markdown("""Egresado de la carrera de Ingeniería Industrial, con experiencia en analítica de datos en el sector retail, consumo masivo y seguros, dentro del área comercial y de recursos humanos. \nApasionado por la lógica, recursos humanos, uso de datos masivos y programación.""")
+  st.markdown("""xxxxxxxx.""")
   st.subheader("🛠️ Tecnologías utilizadas")
   st.markdown("""Para el presente proyecto, se utilizaron las siguientes tecnologías.\n- 🔗 GitHub\n- 🎨 Streamlit\n- 🐍 Google Colab - Python\n- 🔢 NumPy\n- 🐼 Pandas\n- 📚 Librerías externas\n- 🧩 Programación Orientada a Objetos(POO)""")
 
