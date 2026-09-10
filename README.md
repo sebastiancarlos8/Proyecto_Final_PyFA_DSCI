@@ -25,8 +25,8 @@ cliente.
 La aplicación está organizada en dos módulos navegables desde el sidebar
 (`st.sidebar.selectbox`):
 
-- **Home:** presentación del proyecto (sin análisis).
-- **Caso de Estudio N°3:** carga del dataset y el núcleo del EDA, distribuido
+- **Home:** presentación del proyecto (Introducción).
+- **Caso de Estudio N°3:** carga del dataset y desarrollo del EDA, distribuido
   en 8 pestañas (`st.tabs`): las primeras 7 cubren los **10 ítems de análisis**
   exigidos por el caso de estudio (algunas pestañas agrupan 2 ítems
   relacionados) y la octava reúne las **Conclusiones finales** del proyecto.
