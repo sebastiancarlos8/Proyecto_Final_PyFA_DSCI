@@ -10,8 +10,8 @@ from io import StringIO
 
 # Se va a personalizar el título, ícono y modificar el uso de todo el ancho de la pantalla
 
-# Debido a la distribución de gráficos, tablas e información presentada y analizada para el Dataset,
-# se requiere de una amplia distribución en la pantalla, es por ello, que se optó por modificar el 
+# Debido a la distribución de gráficos, tablas e información presentada y analizada para el Dataset,
+# se requiere de una amplia distribución en la pantalla, es por ello, que se optó por modificar el
 # uso de la pantalla.
 
 
@@ -32,22 +32,22 @@ st.set_page_config(
 class DataAnalyzer:
 
     # Se guardará la tabla una vez para que pueda ser utilizada para las funciones
-  
+
     def __init__(self, dataframe):
         self.df = dataframe
 
     # Convierte la salida del método df.info() en texto para que pueda ser mostrado como texto
-    def informacion_general(self):                
+    def informacion_general(self):
         buffer = StringIO()
         self.df.info(buf=buffer)
         return buffer.getvalue()
 
     # Muestra la tabla de tipo de dato de cada columna
-    def tipos_datos(self):                                            
+    def tipos_datos(self):
         return self.df.dtypes.astype(str).to_frame("Tipo de dato")
 
     # Cuenta los valores nulos por columna y calcula el % que representan del total de filas
-    def valores_nulos(self):                                          
+    def valores_nulos(self):
         nulos = self.df.isnull().sum()
         porcentaje = (nulos / len(self.df) * 100).round(2)
 
@@ -59,7 +59,7 @@ class DataAnalyzer:
         return resultado.sort_values("Valores nulos", ascending=False)
 
     # Separa e identifica qué columnas son numéricas y cuáles son categóricas.
-    def clasificar_variables(self):                                              
+    def clasificar_variables(self):
         numericas = self.df.select_dtypes(include=np.number).columns.tolist()
         categoricas = self.df.select_dtypes(exclude=np.number).columns.tolist()
         return numericas, categoricas
@@ -131,7 +131,7 @@ class DataAnalyzer:
 
 # Carga el archivo seleccionado y verifica que sea de formato CSV.
 def cargar_dataset(archivo):
- 
+
     if archivo is None:
         return None
 
@@ -172,7 +172,7 @@ def agregar_edad_anios(df):
 
 # Muestra un resumen del dataset mediante 4 métricas principales: 'Total de clientes', 'Total variables', 'Renovaciones' y 'Tasa de renovación'.
 def mostrar_metrica_resumen(df):
-    
+
     total_clientes = len(df)
     total_variables = len(df.columns)
     renovaciones = df["renewal"].sum()
@@ -195,9 +195,9 @@ def mostrar_metrica_resumen(df):
 #_____________________
 # Creación de gráficas
 
-# Muestra la distribución de una variable numérica mediante un histograma y una curva de densidad. 
+# Muestra la distribución de una variable numérica mediante un histograma y una curva de densidad.
 def grafico_histograma(df, columna):
-  
+
     fig, ax = plt.subplots(figsize=(9, 5))
     sns.histplot(
         data=df,
@@ -235,7 +235,7 @@ def grafico_categorico(df, columna):
 
 # Explica la distribución de los datos comparando la media y la mediana.
 def interpretar_distribucion(df, columna):
-  
+
     serie = df[columna].dropna()
 
     media = np.mean(serie)
@@ -257,7 +257,7 @@ def interpretar_distribucion(df, columna):
 
 # Compara una variable numérica entre quienes renovaron y quienes no, mostrando también los valores atípicos mediante una gráfica de cajas.
 def grafico_numerica_renovacion(df, columna):
-    
+
     datos = df[[columna, "renewal"]].dropna().copy()
     datos["renewal_label"] = datos["renewal"].map({0: "No", 1: "Sí"})
 
@@ -299,7 +299,7 @@ def grafico_numerica_renovacion(df, columna):
 # Muestra cómo se distribuyen los valores de una variable numérica, a través gráfica de barras apiladas(100%).
 
 def grafico_categorica_renovacion(df, columna):
-    
+
     tabla = pd.crosstab(
         df[columna],
         df["renewal"],
@@ -330,7 +330,8 @@ def grafico_categorica_renovacion(df, columna):
 # ___________________________
 # MENÚ PRINCIPAL DEL PROYECTO
 
-
+# Las imágenes DMC.png y Python_logo.png se cargan de forma directa porque
+# permanecerán siempre disponibles en el repositorio, junto a este app.py.
 st.sidebar.image("DMC.png", width=100)
 st.sidebar.title("📚 Contenido")
 modulos = st.sidebar.selectbox("Seleccione un módulo",["Home", "Caso de Estudio N°3"])
@@ -338,7 +339,7 @@ modulos = st.sidebar.selectbox("Seleccione un módulo",["Home", "Caso de Estudio
 
 
 #_______________________________
-# MÓDULO 1 y 2: HOME y CASO N° 3 
+# MÓDULO 1 y 2: HOME y CASO N° 3
 
 if modulos == "Home":
 
@@ -445,7 +446,7 @@ else:
 
         # ______________________________________________
         # VISTA PREVIA Y DIMENSIONES (Carga del dataset)
-        
+
         st.subheader("📂 Carga y validación del dataset")
 
         mostrar_metrica_resumen(datos)
@@ -474,11 +475,11 @@ else:
         # ____________
         # TABS DEL EDA
 
-        """
-        Se usan 7 pestañas para organizar los 10 ítems de análisis que
-        solicitados por el caso de estudio.
-        """
-      
+        # Se usan 8 pestañas: las primeras 7 organizan los 10 ítems de
+        # análisis solicitados por el caso de estudio (algunas pestañas
+        # agrupan 2 ítems relacionados), y la última pestaña adicional
+        # ("Conclusiones") reúne las 5 conclusiones finales del proyecto.
+
         tabs = st.tabs([
             "1️⃣-2️⃣ Información y Variables",
             "3️⃣-4️⃣ Estadística y Nulos",
@@ -486,12 +487,13 @@ else:
             "6️⃣ Categóricas",
             "7️⃣-8️⃣ Bivariado",
             "9️⃣ Dinámico",
-            "🔟 Hallazgos"
+            "🔟 Hallazgos",
+            "1️⃣1️⃣ Conclusiones"
         ])
 
         # _______________________________________
         # ÍTEM 1: Información general del dataset
-        
+
         with tabs[0]:
 
             st.header("📌 Ítem 1: Información general del dataset")
@@ -518,8 +520,8 @@ else:
             )
 
         # __________________________________
-        # ÍTEM 2: Clasificación de variables      
-      
+        # ÍTEM 2: Clasificación de variables
+
         with tabs[0]:
 
             st.header("📌 Ítem 2: Clasificación de variables")
@@ -554,10 +556,10 @@ else:
                 f"función personalizada integrada en la clase `DataAnalyzer`."
             )
 
-      
+
         # _________________________________
         # ÍTEM 3: Estadísticas descriptivas
-      
+
         with tabs[1]:
 
             st.header("📌 Ítem 3: Estadísticas descriptivas")
@@ -613,7 +615,7 @@ else:
 
             # Detección de outliers con la regla del IQR.
             # Ayuda a explicar por qué, en variables como 'Income', la media puede quedar muy por encima de la mediana.
-      
+
             outliers = analyzer.detectar_outliers_iqr(variable_estadistica)
 
             st.write("#### Detección de valores atípicos (regla IQR)")
@@ -627,7 +629,7 @@ else:
 
         # _____________________________________
         # ÍTEM 4: Análisis de valores faltantes
-        
+
         with tabs[1]:
 
             st.header("📌 Ítem 4: Análisis de valores faltantes")
@@ -676,7 +678,7 @@ else:
 
         # ___________________________________________
         # ÍTEM 5: Distribución de variables numéricas
-        
+
         with tabs[2]:
 
             st.header("📌 Ítem 5: Distribución de variables numéricas")
@@ -702,7 +704,7 @@ else:
 
         # _________________________________________
         # ÍTEM 6: Análisis de variables categóricas
-        
+
         with tabs[3]:
 
             st.header("📌 Ítem 6: Análisis de variables categóricas")
@@ -754,7 +756,7 @@ else:
 
         # ___________________________________________________
         # ÍTEM 7: Análisis bivariado - Numérica vs categórica
-        
+
         with tabs[4]:
 
             st.header(
@@ -794,7 +796,7 @@ else:
 
         # _____________________________________________________
         # ÍTEM 8: Análisis bivariado - Categórica vs categórica
-        
+
         with tabs[4]:
 
             st.header(
@@ -826,7 +828,7 @@ else:
 
         # ___________________________________________________
         # ÍTEM 9: Análisis basado en parámetros seleccionados
-        
+
         with tabs[5]:
 
             st.header(
@@ -944,10 +946,10 @@ else:
                     f"al **{porcentaje:.2f}%** del dataset."
                 )
 
-      
+
         # ________________________
         # ÍTEM 10: Hallazgos clave
-        
+
         with tabs[6]:
 
             st.header("📌 Ítem 10: Hallazgos clave")
@@ -1044,53 +1046,57 @@ else:
                 "relaciones causales ni como predicciones."
             )
 
-        
-        # ____________________
-        # CONCLUSIONES FINALES
-        
-        st.divider()
-        st.header("📝 Conclusiones finales")
 
-        st.markdown(
-            """
-            **1.** La tasa de renovación del portafolio es alta (por encima del
-            90%), lo que sugiere que la compañía mantiene, en general, una
-            base de clientes fidelizada; sin embargo, el segmento que no
-            renueva —aunque minoritario— representa una oportunidad concreta
-            de mejora en retención.
+        # ____________________________________________
+        # ÍTEM 11 (adicional): Conclusiones finales
+        # Se ubica en su propia pestaña, separada de "Hallazgos", porque
+        # conceptualmente cierra el proyecto completo (las 5 conclusiones
+        # exigidas por el caso de estudio) y no es un ítem más del EDA.
 
-            **2.** Los clientes morosos (con pagos atrasados de 3 a 6, de 6 a
-            12 o de más de 12 meses) muestran, de forma descriptiva, una menor
-            tendencia a renovar su póliza. Esto posiciona el historial de
-            morosidad como una señal temprana útil para priorizar acciones
-            comerciales de retención.
+        with tabs[7]:
 
-            **3.** El canal de captación (`sourcing_channel`) influye en el
-            comportamiento de renovación observado: algunos canales concentran
-            tasas de renovación más altas que otros, lo que puede orientar
-            decisiones sobre en qué canales invertir esfuerzos comerciales.
+            st.header("📝 Conclusiones finales")
 
-            **4.** Variables económicas como el ingreso (`Income`) y el valor
-            de la prima (`premium`) presentan distribuciones con asimetría y
-            valores atípicos relevantes, por lo que cualquier análisis o
-            reporte que use sus promedios debe complementarse con la mediana
-            y la dispersión para no llegar a conclusiones distorsionadas.
+            st.markdown(
+                """
+                **1.** La tasa de renovación del portafolio es alta (por encima del
+                90%), lo que sugiere que la compañía mantiene, en general, una
+                base de clientes fidelizada; sin embargo, el segmento que no
+                renueva —aunque minoritario— representa una oportunidad concreta
+                de mejora en retención.
 
-            **5.** El puntaje de evaluación del cliente
-            (`application_underwriting_score`) presenta una cantidad
-            considerable de valores faltantes, por lo que antes de utilizarlo
-            en futuros análisis (incluyendo eventuales modelos predictivos)
-            se recomienda definir una estrategia explícita de tratamiento de
-            datos faltantes.
-            """
-        )
+                **2.** Los clientes morosos (con pagos atrasados de 3 a 6, de 6 a
+                12 o de más de 12 meses) muestran, de forma descriptiva, una menor
+                tendencia a renovar su póliza. Esto posiciona el historial de
+                morosidad como una señal temprana útil para priorizar acciones
+                comerciales de retención.
 
-        st.caption(
-            "Estas conclusiones se basan en relaciones descriptivas "
-            "identificadas mediante el EDA y buscan apoyar decisiones de "
-            "negocio (por ejemplo, foco de campañas de retención), sin "
-            "constituir un modelo predictivo."
-        )
+                **3.** El canal de captación (`sourcing_channel`) influye en el
+                comportamiento de renovación observado: algunos canales concentran
+                tasas de renovación más altas que otros, lo que puede orientar
+                decisiones sobre en qué canales invertir esfuerzos comerciales.
+
+                **4.** Variables económicas como el ingreso (`Income`) y el valor
+                de la prima (`premium`) presentan distribuciones con asimetría y
+                valores atípicos relevantes, por lo que cualquier análisis o
+                reporte que use sus promedios debe complementarse con la mediana
+                y la dispersión para no llegar a conclusiones distorsionadas.
+
+                **5.** El puntaje de evaluación del cliente
+                (`application_underwriting_score`) presenta una cantidad
+                considerable de valores faltantes, por lo que antes de utilizarlo
+                en futuros análisis (incluyendo eventuales modelos predictivos)
+                se recomienda definir una estrategia explícita de tratamiento de
+                datos faltantes.
+                """
+            )
+
+            st.caption(
+                "Estas conclusiones se basan en relaciones descriptivas "
+                "identificadas mediante el EDA y buscan apoyar decisiones de "
+                "negocio (por ejemplo, foco de campañas de retención), sin "
+                "constituir un modelo predictivo."
+            )
 
     else:
 
