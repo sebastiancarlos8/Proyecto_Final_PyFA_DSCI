@@ -122,7 +122,8 @@ propias lecturas, sin necesidad de escribir código.
 <!--
   <img width="1879" height="1070" alt="image" src="https://github.com/user-attachments/assets/3b3759d0-88fa-4547-bd77-1fc4285415ff" />
 
-  ![Home](ruta/a/tu/imagen_home.png)
+  ![Home](<img width="1879" height="1070" alt="image" src="https://github.com/user-attachments/assets/39c3d26e-2f2f-407d-a779-e80d649e9055" />
+)
   ![Carga del dataset](ruta/a/tu/imagen_carga.png)
   ![Ítem numérico](ruta/a/tu/imagen_item_numerico.png)
   ![Ítem categórico](ruta/a/tu/imagen_item_categorico.png)
