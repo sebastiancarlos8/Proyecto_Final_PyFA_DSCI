@@ -1062,7 +1062,7 @@ else:
                 **1.** La tasa de renovación del portafolio es alta (por encima del
                 90%), lo que sugiere que la compañía mantiene, en general, una
                 base de clientes fidelizada; sin embargo, el segmento que no
-                renueva —aunque minoritario— representa una oportunidad concreta
+                renueva, aunque minoritario, representa una oportunidad concreta
                 de mejora en retención.
 
                 **2.** Los clientes morosos (con pagos atrasados de 3 a 6, de 6 a
@@ -1091,12 +1091,6 @@ else:
                 """
             )
 
-            st.caption(
-                "Estas conclusiones se basan en relaciones descriptivas "
-                "identificadas mediante el EDA y buscan apoyar decisiones de "
-                "negocio (por ejemplo, foco de campañas de retención), sin "
-                "constituir un modelo predictivo."
-            )
 
     else:
 
