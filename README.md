@@ -120,7 +120,7 @@ propias lecturas, sin necesidad de escribir código.
 
 # Home
 <!--
-  ![Home](capturas/Home.png)
+  ![Módulo Home](capturas/home.png)
   ![Carga del dataset](Carga_Dataset)
   ![Ítem numérico](ruta/a/tu/imagen_item_numerico.png)
   ![Ítem categórico](ruta/a/tu/imagen_item_categorico.png)
