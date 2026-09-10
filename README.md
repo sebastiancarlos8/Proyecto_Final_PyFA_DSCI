@@ -121,6 +121,8 @@ propias lecturas, sin necesidad de escribir código.
 # Home
 
   ![Módulo Home](Capturas/Home.png)
+
+# Caso N° 3
   ![Carga del dataset](Capturas/Carga_Dataset.png)
   ![Previsualización](Capturas/Previsualización_DAtaset.png)
   ![Ítem 1 & 2](Capturas/Item1y2.png)
@@ -131,6 +133,7 @@ propias lecturas, sin necesidad de escribir código.
   ![Ítem 8](Capturas/Item8.png)
   ![Ítem 9](Capturas/Item9.png)
   ![Ítem 10](Capturas/Item10.png)
+  ![Hallazgos](Capturas/Hallazgos.png)
   
 ---
 
