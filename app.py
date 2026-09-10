@@ -9,11 +9,11 @@ from io import StringIO
 # Configuración de la página
 
 # Se va a personalizar el título, ícono y modificar el uso de todo el ancho de la pantalla
-"""
-Debido a la distribución de gráficos, tablas e información presentada y analizada para el Dataset,
-se requiere de una amplia distribución en la pantalla, es por ello, que se optó por modificar el 
-uso de la pantalla.
-"""
+
+#Debido a la distribución de gráficos, tablas e información presentada y analizada para el Dataset,
+#se requiere de una amplia distribución en la pantalla, es por ello, que se optó por modificar el 
+#uso de la pantalla.
+
 
 st.set_page_config(
     page_title="Insurance Company - EDA",
