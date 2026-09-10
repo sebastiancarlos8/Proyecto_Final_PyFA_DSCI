@@ -120,12 +120,8 @@ propias lecturas, sin necesidad de escribir código.
 
 # Home
 <!--
-  <img width="1879" height="1070" alt="image" src="https://github.com/user-attachments/assets/3b3759d0-88fa-4547-bd77-1fc4285415ff" />
-
-  ![Home](<img width="1879" height="1070" alt="image" src="https://github.com/user-attachments/assets/39c3d26e-2f2f-407d-a779-e80d649e9055" />
-)
-  ![Carga del dataset](<img width="1878" height="1070" alt="image" src="https://github.com/user-attachments/assets/e5d68fdb-82b9-4cac-ac74-3337852f1d5f" />
-)
+  ![Home](capturas/Home)
+  ![Carga del dataset](capturas/Carga_Dataset)
   ![Ítem numérico](ruta/a/tu/imagen_item_numerico.png)
   ![Ítem categórico](ruta/a/tu/imagen_item_categorico.png)
   ![Hallazgos y conclusiones](ruta/a/tu/imagen_hallazgos.png)
