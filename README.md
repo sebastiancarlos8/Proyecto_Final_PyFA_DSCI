@@ -120,8 +120,8 @@ propias lecturas, sin necesidad de escribir código.
 
 # Home
 <!--
-  ![Home](capturas/Home)
-  ![Carga del dataset](capturas/Carga_Dataset)
+  ![Home](capturas/Home.png)
+  ![Carga del dataset](capturas/Carga_Dataset.png)
   ![Ítem numérico](ruta/a/tu/imagen_item_numerico.png)
   ![Ítem categórico](ruta/a/tu/imagen_item_categorico.png)
   ![Hallazgos y conclusiones](ruta/a/tu/imagen_hallazgos.png)
