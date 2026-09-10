@@ -10,9 +10,9 @@ from io import StringIO
 
 # Se va a personalizar el título, ícono y modificar el uso de todo el ancho de la pantalla
 
-#Debido a la distribución de gráficos, tablas e información presentada y analizada para el Dataset,
-#se requiere de una amplia distribución en la pantalla, es por ello, que se optó por modificar el 
-#uso de la pantalla.
+# Debido a la distribución de gráficos, tablas e información presentada y analizada para el Dataset,
+# se requiere de una amplia distribución en la pantalla, es por ello, que se optó por modificar el 
+# uso de la pantalla.
 
 
 st.set_page_config(
@@ -25,10 +25,9 @@ st.set_page_config(
 # _________________________________________________________________________________
 # Aplicación de Programación Orientada a Objetos, mediante la clase 'Data Analyzer'
 
-"""
-La clase va a centralizar toda la lógica respecto al análisis exploratorio de datos aplicado en el DataFrame: estadística
-descriptiva, clasificación de variables, tablas de nulos, cruces con la variable objetivo, entre otros.
-"""
+# La clase va a centralizar toda la lógica respecto al análisis exploratorio de datos aplicado en el DataFrame: estadística
+# descriptiva, clasificación de variables, tablas de nulos, cruces con la variable objetivo, entre otros.
+
 
 class DataAnalyzer:
 
