@@ -74,20 +74,6 @@ natural (f-strings).
 
 ---
 
-## 📂 Estructura del repositorio
-
-```
-insurance-eda-streamlit/
-├── app.py                     # Aplicación Streamlit (código fuente)
-├── requirements.txt           # Dependencias del proyecto
-├── InsuranceCompany.csv       # Dataset utilizado en el análisis
-├── DMC.png                    # Logo institucional (sidebar)
-├── Python_logo.png            # Logo de Python (módulo Home)
-└── README.md                  # Este archivo
-```
-
----
-
 ## ▶️ Instrucciones de ejecución
 
 #### 🏠 Módulo "Home"
