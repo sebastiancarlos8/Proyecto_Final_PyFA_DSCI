@@ -132,8 +132,9 @@ propias lecturas, sin necesidad de escribir código.
   ![Ítem 7](Capturas/Item7.png)
   ![Ítem 8](Capturas/Item8.png)
   ![Ítem 9](Capturas/Item9.png)
+
+# Hallazgos
   ![Ítem 10](Capturas/Item10.png)
-  ![Hallazgos](Capturas/Hallazgos.png)
   
 ---
 
