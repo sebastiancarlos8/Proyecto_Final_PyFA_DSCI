@@ -120,8 +120,8 @@ propias lecturas, sin necesidad de escribir código.
 
 # Home
 
-  ![Módulo Home](Capturas/home.png)
-  ![Carga del dataset](Capturas/Carga_Dataset)
+  ![Módulo Home](Capturas/Home.png)
+  ![Carga del dataset](Capturas/Carga_Dataset.png)
   ![Previsualización](Capturas/Previsualización_DAtaset.png)
   ![Ítem 1 & 2](Capturas/Item1y2.png)
   ![Ítem 3 & 4](Capturas/Item3y4.png)
