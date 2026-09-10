@@ -119,16 +119,19 @@ propias lecturas, sin necesidad de escribir código.
 ## 🖼️ Capturas de la app
 
 # Home
-<!--
-  ![Módulo Home](capturas/home.png)
-  ![Carga del dataset](Carga_Dataset)
-  ![Ítem numérico](ruta/a/tu/imagen_item_numerico.png)
-  ![Ítem categórico](ruta/a/tu/imagen_item_categorico.png)
-  ![Hallazgos y conclusiones](ruta/a/tu/imagen_hallazgos.png)
--->
 
-*(Espacio reservado — pega aquí tus capturas de pantalla)*
-
+  ![Módulo Home](Capturas/home.png)
+  ![Carga del dataset](Capturas/Carga_Dataset)
+  ![Previsualización](Capturas/Previsualización_DAtaset.png)
+  ![Ítem 1 & 2](Capturas/Item1y2.png)
+  ![Ítem 3 & 4](Capturas/Item3y4.png)
+  ![Ítem 5](Capturas/Item5.png)
+  ![Ítem 6](Capturas/Item6.png)
+  ![Ítem 7](Capturas/Item7.png)
+  ![Ítem 8](Capturas/Item8.png)
+  ![Ítem 9](Capturas/Item9.png)
+  ![Ítem 10](Capturas/Item10.png)
+  
 ---
 
 ## 🔗 Enlaces relevantes
