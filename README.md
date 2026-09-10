@@ -118,11 +118,9 @@ propias lecturas, sin necesidad de escribir código.
 
 ## 🖼️ Capturas de la app
 
+# Home
 <!--
-  Pega aquí tus capturas de pantalla una vez que ejecutes o despliegues la
-  app. Sugerencia: incluir al menos una del módulo Home, una de la carga del
-  dataset, una de un ítem numérico, una de un ítem categórico y una de
-  Hallazgos/Conclusiones. Ejemplo de sintaxis (descomentar y ajustar rutas):
+  <img width="1879" height="1070" alt="image" src="https://github.com/user-attachments/assets/3b3759d0-88fa-4547-bd77-1fc4285415ff" />
 
   ![Home](ruta/a/tu/imagen_home.png)
   ![Carga del dataset](ruta/a/tu/imagen_carga.png)
